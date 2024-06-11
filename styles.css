@@ -1,6 +1,6 @@
 /* Estilos Gerais */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: linear-gradient(to right, #ff9a9e, #fad0c4);
     margin: 0;
     padding: 0;
@@ -22,7 +22,8 @@ header {
 }
 
 header h1 {
-    font-size: 1.8em;
+    font-size: 2em; /* Aumentei um pouco para maior impacto */
+    font-weight: 700; /* Usando um peso mais pesado para destaque */
     color: #fff;
     animation: pulse 1.5s infinite;
 }
@@ -68,7 +69,7 @@ main {
 
 .spotify-embed {
     width: 100%;
-    height: 200px;
+    height: 200px; /* Ajustado para um tamanho fixo */
     border-radius: 10px;
     margin-top: 15px;
 }
@@ -82,21 +83,92 @@ footer {
 }
 
 footer h1 {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Um pouco maior para destaque */
+    font-weight: 500; /* Peso médio */
     color: #fff;
 }
 
+/* Estilos para o countdown */
 #countdown {
-    margin-top: 10px;
-}
-
-#countdown p {
-    font-size: 0.9em;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
 }
 
 #time {
-    font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap; /* Garante que os itens não se quebrem em várias linhas */
+    font-family: 'Courier New', Courier, monospace;
 }
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.digit {
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #222;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    min-width: 60px;
+    text-align: center;
+    border: 2px solid #444;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.label {
+    font-size: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 600px) {
+    #countdown {
+        padding: 10px;
+    }
+
+    #time {
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: nowrap; /* Garante que os itens permaneçam em uma única linha */
+    }
+
+    .digit {
+        font-size: 2em;
+        padding: 8px 16px;
+        min-width: 50px; /* Reduz o mínimo de largura para se ajustar a telas menores */
+    }
+
+    .label {
+        font-size: 0.9em;
+    }
+
+    .message {
+        font-size: 1em;
+    }
+}
+
 
 .lightbox {
     display: none;
@@ -151,7 +223,7 @@ footer h1 {
     }
 
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.8em; /* Reduzido um pouco para caber melhor em telas menores */
     }
 
     .gallery-item {
@@ -169,15 +241,7 @@ footer h1 {
     }
 
     footer h1 {
-        font-size: 1em;
-    }
-
-    #time {
-        font-size: 1em;
-    }
-
-    .spotify-embed {
-        height: 150px;
+        font-size: 1.2em; /* Reduzido um pouco para caber melhor em telas menores */
     }
 
     .lightbox-content {
@@ -186,5 +250,26 @@ footer h1 {
 
     .close {
         font-size: 25px;
+    }
+    
+    #countdown {
+        padding: 10px;
+    }
+
+    #time {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .digit {
+        font-size: 2em;
+        padding: 8px 16px;
+    }
+
+    .label {
+        font-size: 0.9em;
+    }
+
+    .message {
+        font-size: 1em;
     }
 }
