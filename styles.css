@@ -19,8 +19,8 @@ header {
 }
 
 header h1 {
-    font-size: 2em; /* Aumentei um pouco para maior impacto */
-    font-weight: 700; /* Usando um peso mais pesado para destaque */
+    font-size: 2em; /* Título */
+    font-weight: 700; /* Peso pesado */
     color: #fff;
     animation: pulse 1.5s infinite;
 }
@@ -86,7 +86,7 @@ footer {
 }
 
 footer h1 {
-    font-size: 1.5em; /* Um pouco maior para destaque */
+    font-size: 1.5em; /* Título do rodapé */
     font-weight: 500; /* Peso médio */
     color: #fff;
 }
@@ -115,7 +115,7 @@ footer h1 {
 }
 
 .digit {
-    font-size: 2.5em;
+    font-size: 2.5em; /* Tamanho dos dígitos */
     font-weight: bold;
     padding: 10px 20px;
     background-color: #222;
@@ -128,14 +128,14 @@ footer h1 {
 }
 
 .label {
-    font-size: 1em;
+    font-size: 1em; /* Tamanho das etiquetas */
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .message {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Tamanho da mensagem */
     font-weight: 300;
     font-style: italic;
     margin-top: 15px;
@@ -208,7 +208,7 @@ footer h1 {
 
     footer {
         padding: 8px;
-        margin-top: 10px;
+        margin-top: 10px;  
     }
 
     footer h1 {
@@ -234,17 +234,16 @@ footer h1 {
     }
 
     .digit {
-        font-size: 2em;
+        font-size: 2em; /* Tamanho dos dígitos */
         padding: 8px 16px;
         min-width: 50px; /* Ajuste de largura para telas menores */
     }
 
     .label {
-        font-size: 0.9em;
+        font-size: 0.9em; /* Tamanho das etiquetas */
     }
 
     .message {
-        font-size: 1em;
+        font-size: 1em; /* Tamanho da mensagem */
     }
-
 }
