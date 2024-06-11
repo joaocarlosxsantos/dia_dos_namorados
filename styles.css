@@ -69,7 +69,7 @@ main {
 
 .spotify-embed {
     width: 100%;
-    height: 200px; /* Ajustado para um tamanho fixo */
+    height: 100%; 
     border-radius: 10px;
     margin-top: 15px;
 }
@@ -90,7 +90,6 @@ footer h1 {
 
 /* Estilos para o countdown */
 #countdown {
-    margin-top: 20px;
     padding: 20px;
     background-color: #333;
     border-radius: 10px;
@@ -99,14 +98,11 @@ footer h1 {
     text-align: center;
 }
 
-#time {
+.row {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: nowrap; /* Garante que os itens não se quebrem em várias linhas */
-    font-family: 'Courier New', Courier, monospace;
+    gap: 20px; /* Espaçamento entre os blocos */
+    margin-bottom: 15px; /* Espaçamento entre as linhas */
 }
 
 .time-unit {
@@ -136,39 +132,11 @@ footer h1 {
 }
 
 .message {
-    margin-top: 15px;
     font-size: 1.2em;
     font-weight: 300;
     font-style: italic;
+    margin-top: 15px;
 }
-
-/* Estilos específicos para dispositivos móveis */
-@media (max-width: 600px) {
-    #countdown {
-        padding: 10px;
-    }
-
-    #time {
-        flex-direction: row;
-        gap: 10px;
-        flex-wrap: nowrap; /* Garante que os itens permaneçam em uma única linha */
-    }
-
-    .digit {
-        font-size: 2em;
-        padding: 8px 16px;
-        min-width: 50px; /* Reduz o mínimo de largura para se ajustar a telas menores */
-    }
-
-    .label {
-        font-size: 0.9em;
-    }
-
-    .message {
-        font-size: 1em;
-    }
-}
-
 
 .lightbox {
     display: none;
@@ -253,16 +221,19 @@ footer h1 {
     }
     
     #countdown {
-        padding: 10px;
+        padding: 20px;
     }
 
-    #time {
-        flex-direction: column;
-        gap: 10px;
+    .row {
+        flex-direction: row;
+        gap: 10px; /* Espaçamento reduzido para telas menores */
+        margin-bottom: 10px; /* Reduz o espaço entre linhas */
     }
+
     .digit {
         font-size: 2em;
         padding: 8px 16px;
+        min-width: 50px; /* Ajuste de largura para telas menores */
     }
 
     .label {
@@ -272,4 +243,5 @@ footer h1 {
     .message {
         font-size: 1em;
     }
+
 }
