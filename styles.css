@@ -44,8 +44,8 @@ main {
 }
 
 .gallery-item {
-    flex: 0 0 calc(33.33% - 20px); /* 3 colunas com 10px de espaçamento entre elas */
-    max-width: calc(33.33% - 20px);
+    flex: 0 0 calc(50% - 10px); /* 2 imagens por linha com 10px de espaçamento entre elas */
+    max-width: calc(50% - 10px);
 }
 
 .gallery-item img {
@@ -149,16 +149,9 @@ footer p {
     background: #ff6f61;
 }
 
-@media (max-width: 768px) {
-    #countup p {
-        font-size: 1em;
-    }
-
-    #time {
-        font-size: 1em;
-    }
-
-    #time span {
-        padding: 0.1em 0.3em;
+@media (min-width: 768px) {
+    .gallery-item {
+        flex: 0 0 calc(33.33% - 20px); /* 3 imagens por linha em telas maiores */
+        max-width: calc(33.33% - 20px);
     }
 }
