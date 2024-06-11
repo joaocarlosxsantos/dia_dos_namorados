@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 </head>
 <body>
     <header>
@@ -21,28 +25,18 @@
     <footer>
         <p>Para minha amada, com todo meu amor.</p>
     </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Imagem Grande">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
 
-<script>
-    // Este é um exemplo de um simples lightbox
-    document.addEventListener('DOMContentLoaded', function() {
-        const images = document.querySelectorAll('.gallery-item img');
-        images.forEach(image => {
-            image.addEventListener('click', () => {
-                const src = image.getAttribute('src');
-                const modal = document.createElement('div');
-                modal.classList.add('modal');
-                modal.innerHTML = `<img src="${src}" alt="Foto Grande"><span class="close">&times;</span>`;
-                document.body.appendChild(modal);
 
-                modal.querySelector('.close').addEventListener('click', () => {
-                    document.body.removeChild(modal);
-                });
-            });
-        });
-    });
-</script>
 
 <style>
     /* Estilos para o lightbox */
