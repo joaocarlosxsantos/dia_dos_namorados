@@ -122,7 +122,6 @@ footer p {
 }
 
 
-
 #countup {
     text-align: center;
     margin-top: 1em;
@@ -131,16 +130,20 @@ footer p {
     color: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #countup p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 0.5em;
 }
 
 #time {
-    font-size: 2em;
+    font-size: 1.5em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 0.5em;
 }
@@ -150,4 +153,18 @@ footer p {
     padding: 0.2em 0.5em;
     border-radius: 5px;
     background: #ff6f61;
+}
+
+@media (max-width: 768px) {
+    #countup p {
+        font-size: 1em;
+    }
+
+    #time {
+        font-size: 1em;
+    }
+
+    #time span {
+        padding: 0.1em 0.3em;
+    }
 }

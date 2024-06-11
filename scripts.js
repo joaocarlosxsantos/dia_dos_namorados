@@ -24,12 +24,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// countup.js
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Data alvo em UTC para evitar problemas de fuso horário
+    const targetDate = new Date(Date.UTC(2022, 10, 11, 0, 0, 0)); // Mês 10 porque janeiro é 0
+
     function updateCountup() {
-        const targetDate = new Date('2022-11-11T00:00:00'); // Data alvo
         const currentDate = new Date(); // Data atual
-        const difference = currentDate - targetDate; // Diferença em milissegundos
+        const difference = currentDate.getTime() - targetDate.getTime(); // Diferença em milissegundos
+
+        if (difference < 0) {
+            console.error('A data alvo é no futuro. Verifique a data.');
+            return;
+        }
 
         // Calculando o tempo passado
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -46,4 +53,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Atualiza o contador a cada segundo
     setInterval(updateCountup, 1000);
+    updateCountup(); // Chama a função imediatamente para evitar o atraso de 1 segundo na inicialização
 });
